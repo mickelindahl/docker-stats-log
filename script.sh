@@ -14,8 +14,8 @@ for CONTAINER in $CONTAINERS; do
    #echo "data/"$CONTAINER"-week-"$WEEK-"mem"
 
    echo "$THE_DATE $MEM" >> "data/"$CONTAINER"_week_"$WEEK".mem"
-   echo "$THE_DATE $MEM" >> "data/"$CONTAINER"_month-"$MONTH".mem"
-   echo "$THE_DATE $CPU" >> "data/"$CONTAINER"_week-"$WEEK".cpu"
-   echo "$THE_DATE $CPU" >> "data/"$CONTAINER"_month-"$MONTH".cpu"
+   # echo "$THE_DATE $MEM" >> "data/"$CONTAINER"_month_"$MONTH".mem"
+   echo "$THE_DATE $CPU" >> "data/"$CONTAINER"_week_"$WEEK".cpu"
+   # echo "$THE_DATE $CPU" >> "data/"$CONTAINER"_month_"$MONTH".cpu"
 
 done
