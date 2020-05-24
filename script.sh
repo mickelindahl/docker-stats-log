@@ -2,12 +2,12 @@
 
 CONTAINERS=$(docker inspect --format='{{.Name}}' $(docker ps -aq --no-trunc) | cut -c2-)
 
-WEEK=$(date '+%w')
+WEEK=$(date '+%W')
 MONTH=$(date '+%m')
+THE_DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
 for CONTAINER in $CONTAINERS; do
 
-   THE_DATE=$(date '+%Y-%m-%d %H:%M:%S')
    MEM=$(docker stats --no-stream $CONTAINER --format '{{ .MemUsage }}')
    CPU=$(docker stats --no-stream $CONTAINER --format '{{.CPUPerc}}')
 
